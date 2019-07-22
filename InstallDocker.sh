@@ -7,6 +7,8 @@ uname -a
 echo
 apt-get update
 echo
+sudo su
+echo
 sudo apt-get install apt-transport-https ca-certificates
 echo
 curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add –
