@@ -1,26 +1,28 @@
 #! /bin/bash
 
 Echo "########################################################"
-echo "Installing Docker....."
-echo 
-uname -a
-echo
-apt-get update
-echo
 sudo su
-echo
+echo "Admin rights - Done"
+cd /
+echo "root folder "
+uname -a
+echo "Get Sytem information - Done"
+apt-get update
+echo "Update Apt-Get - Done"
 sudo apt-get install apt-transport-https ca-certificates
-echo
+echo "Install certificate - Done"
 curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add –
-echo
+echo "Download Docker.... - Done"
 sudo apt-key fingerprint 0EBFCD88
-echo
+echo "Applied Key value - Done"
 sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable"
-echo
+echo "Download Pre-release - Done"
 sudo apt-get update
-echo
+echo "Update system="
 sudo apt-get install docker-ce
+echo " Install Docker"
 echo
 sudo docker -v
-echo
+echo "Docker Version"
 sudo docker run hello-world
+echo "Installatino Passed"
