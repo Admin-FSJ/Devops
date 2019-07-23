@@ -12,7 +12,7 @@ echo "Get Sytem information - Done"
 sudo apt-get update
 echo "Update Apt-Get - Done"
 
-sudo apt-get install apt-transport-https ca-certificates
+sudo apt-get install apt-transport-https ca-certificates | $1
 echo "Install certificate - Done"
 
 curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add
